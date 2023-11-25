@@ -76,6 +76,11 @@ html {
 }
 
 body{
+    background-image: url('../img/BGnLogo/BgImage.jpg');
+    background-attachment: fixed;   
+    background-position: center;    
+    background-repeat: no-repeat;
+    background-size: cover;
     background-size: 100% auto;
     font-family:"Montserrat";
     margin: 0px;
@@ -142,15 +147,14 @@ body::-webkit-scrollbar {
     line-height: 1; 
     letter-spacing: 0.03cm; 
     text-transform: uppercase; 
-    -webkit-transition: opacity 300ms ease; 
-    -moz-transition: opacity 300ms ease; 
-    -ms-transition: opacity 300ms ease; 
-    transition: opacity 300ms ease;
 }
 
 .NavBarItem:hover{ 
     animation: HoverZoom ease 500ms;
     animation-fill-mode: both;
+    background-color: #c2c2c2;
+    color: black;
+    font-weight: 700;
 }
 
 .NavListBaseSetting .NavBarOptions .NavBarItem{
@@ -160,11 +164,6 @@ body::-webkit-scrollbar {
 }
 
 /*Nav Bar Dropdown*/
-
-.NavListBaseSetting .NavBarOptions .NavBarItem:hover{
-    color: black;
-    font-weight: 700;
-}
 
 .NavListBaseSetting .NavBarOptions ul.dropdown{
     max-width: 150px; 
@@ -259,7 +258,9 @@ body::-webkit-scrollbar {
     border-radius: 3%;
     width: 500px;
     margin: 1%;
-    animation: RLSideLoad ease 500ms
+    animation: RLSideLoad ease 1500ms;
+    animation-fill-mode: both;
+
 }
 
 .TruckImage:hover {
@@ -411,6 +412,8 @@ footer{
     width: 100%;
     bottom: 0;
     background-color: black;
+    animation: BottomTopLoad ease 700ms;
+    animation-fill-mode: both;
 }
 
 .MainFooter{
@@ -534,6 +537,7 @@ footer{
 
 a{
     color: inherit;
+    text-decoration: none;
 }
 
 hr {
@@ -558,6 +562,7 @@ ul{
 
 #active {
     background-color: #c4c4c4;
+    font-weight: 700;
 }
 
 .Spacer10 {
