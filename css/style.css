@@ -1,0 +1,615 @@
+/*@*/
+
+@keyframes promena{
+    0%{opacity: 1;}
+    15% {opacity: 1;}
+    30%{opacity: 0;}
+    90% {opacity:0;}
+    100% {opacity:1;}
+}
+
+@keyframes FadeInLoad{
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+     }
+}
+
+@keyframes RLSideLoad{
+    0% {
+        transform: translateY(-25px);
+    }
+    100% {
+        transform: translateY(0px);
+    }
+}
+
+@keyframes BottomTopLoad{
+    0% {
+        transform: translateY(50px);
+    }
+    100% {
+        transform: translateY(0px);
+    }
+}
+
+@keyframes DropDownLoad{
+    0% {
+        transform: scaleY(10%);
+    }
+    100% {
+        transform: translateY(0px);
+    }
+}
+
+@keyframes HoverZoom{
+    0% {
+        transform: scale(1);
+    }
+    100% {
+        transform: scale(1.05);
+    }
+}
+
+@keyframes HoverZoomTrucks{
+    0% {
+        transform: scale(1);
+    }
+    100% {
+        transform: scale(1.15);
+    }
+}
+
+/**/
+/**/
+/*Body*/
+
+* {
+    padding: 0px;
+    margin: 0px;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body{
+    background-size: 100% auto;
+    font-family:"Montserrat";
+    margin: 0px;
+    animation: FadeInLoad ease 1s;
+    animation-fill-mode: both;
+}
+
+body::-webkit-scrollbar {
+    display: none;
+}
+
+.cleaner {
+    clear: both;
+}
+
+#Parallax {
+    background-image: url('../img/BGnLogo/BgImage.jpg');
+    width: 100%;
+    height: 110vh;
+    background-attachment: fixed;   
+    background-position: center;    
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: fixed;
+    z-index: -1;
+} 
+
+/*Navigation*/
+
+.NavBarHeader{
+    position: sticky;
+    top: 0; 
+    z-index: 999; 
+    width: 100%; 
+    animation: RLSideLoad ease 1000ms;
+    animation-fill-mode: both;
+    border-bottom: 2px solid #000;
+}
+
+.LogoImg {
+    position: relative;
+    display: inline-block;
+    width: 300px;
+    max-width: 10%;
+    height: auto;
+}
+
+.nav ul{
+    text-align: center;
+}
+
+.nav li{
+    display: inline-block; 
+    margin: 5px 10px 5px 10px; 
+    padding: 10px;
+}
+
+.NavBarItem{ 
+    border: 2.2px solid transparent; 
+    border-radius: 5px;
+    border-color: #000000;
+    font-family: 'Montserrat', sans-serif; 
+    font-size: 12px; 
+    line-height: 1; 
+    letter-spacing: 0.03cm; 
+    text-transform: uppercase; 
+    -webkit-transition: opacity 300ms ease; 
+    -moz-transition: opacity 300ms ease; 
+    -ms-transition: opacity 300ms ease; 
+    transition: opacity 300ms ease;
+}
+
+.NavBarItem:hover{ 
+    animation: HoverZoom ease 500ms;
+    animation-fill-mode: both;
+}
+
+.NavListBaseSetting .NavBarOptions .NavBarItem{
+    padding: 8px 25px;
+    color: #333;
+    text-decoration: none;
+}
+
+/*Nav Bar Dropdown*/
+
+.NavListBaseSetting .NavBarOptions .NavBarItem:hover{
+    color: black;
+    font-weight: 700;
+}
+
+.NavListBaseSetting .NavBarOptions ul.dropdown{
+    max-width: 150px; 
+    background: #f2f2f2;
+    display: none;
+    position: absolute;
+    z-index: 997;
+    animation: DropDownLoad ease 300ms;
+    animation-fill-mode: backwards;
+    color: #333;
+    border: 1px solid black ;
+}
+
+.NavListBaseSetting .NavBarOptions ul.dropdown li {
+    width: 130px;
+    margin: 0px;
+}
+
+.NavListBaseSetting .NavBarOptions ul.dropdown li:hover{
+    background: #c2c2c2;
+}
+
+.NavListBaseSetting .NavBarOptions:hover ul.dropdown{
+    display: block;
+    text-align: left;
+}
+
+.NavListBaseSetting .NavBarOptions:hover ul.dropdown a:hover{
+    font-weight: 600; 
+    text-decoration: none;
+}
+
+/*Motivation text*/
+
+.MotivationText{
+    margin: 0px auto;
+    animation: BottomTopLoad ease 700ms;
+    animation-fill-mode: both;
+}
+
+.MotivationText h1 {
+    text-align: center;
+    font-family: Oswald;
+    color: white;
+    font-size: 150px;
+    margin-top: 5%;
+    margin-bottom: 5%;
+}
+
+/*Main Page Text*/
+
+.MainText{
+    position: sticky;
+    display: block;
+    background-color: #ffffff;
+    animation: BottomTopLoad ease 1000ms;
+    animation-fill-mode: both;
+}
+
+.MainTextHead{
+    margin: 1% auto;
+    text-align: center;
+    font-size: 50px;
+}
+
+.MainTextSubHead{
+    margin-right: 2%;
+    margin-left: 2%;  
+    margin-bottom: 5px; 
+}
+
+.MainTextParagraph{
+    text-align: center;
+    font-size: 18px;
+}
+
+.MainTextParagraph span {
+    font-weight: bold;
+}
+
+/*Izbor Kamiona*/
+
+.Trucks {
+    margin: 0% auto;
+    text-align: center;
+}
+
+.TrucksFrame {
+    display: inline-block;
+    background-color: #f0f0ed;
+    border: 2px solid black;
+    border-radius: 3%;
+    width: 500px;
+    margin: 1%;
+    animation: RLSideLoad ease 500ms
+}
+
+.TruckImage:hover {
+    animation: HoverZoomTrucks ease 500ms;
+    animation-fill-mode: both;
+}
+
+.TruckImage {
+    border-radius: 10%;
+    width: 300px;
+    height: 300px;
+    margin-top: 5%;
+}
+
+.AuthorImage {
+    border-radius: 50%;
+    width: 300px;
+    height: 300px;
+    margin-top: 5%;
+}
+
+.TrucksHead {
+    font-size: 28px;
+    margin-top: 2%;
+}
+
+.TrucksText {
+    margin: 5% 3% 5% 3%;
+    font-size: 18px;
+}
+
+.LearnButtonA {
+    text-decoration: none;
+    color: white;
+    font-size: 20px;
+}
+
+.LearnButton {
+    margin: 2% auto;
+    background-color: black;
+    border-radius: 10px;
+    width: 30%;
+    padding: 2%;
+    font-weight: bold;
+}
+
+.LearnButton:hover {
+    animation: HoverZoom ease 500ms;
+    animation-fill-mode: both;
+    background: #1b1b1c;
+}
+
+/*Split*/
+
+.Info {
+    margin: 0px auto;
+    text-align: center;
+    height: 750px;
+}
+
+.Split {
+    margin: 0px auto;
+    margin: 1%;
+    position: relative;
+    display: inline-block;
+}
+
+#Mapa {
+    width: 700px;
+    height: 800px;
+}
+
+#Forma {
+    width: 700px;
+    height: 700px;
+}
+
+.iframeMapa {
+    width: 550px;
+    height: 550px;
+}
+
+/*Forma*/
+
+form {
+    height: 550px;
+    margin: 25px;
+}
+
+.MainTextHeadForma{
+    margin-right: 2%;
+    margin-left: 2%;  
+    margin-bottom: 5px; 
+}
+
+.InputArea{
+    width: 500px;
+    height: 30px;
+    font-family: 'Montserrat', sans-serif; 
+    text-align: center;
+    border-radius: 3px;
+    border: 1px solid #424242;
+}
+
+.TextInput{
+    width: 500px;
+    height: 100px;
+    resize: none;
+    font-family: 'Montserrat', sans-serif; 
+    text-align: center;
+    border-radius: 3px;
+    border: 1px solid #424242;
+}
+
+.InputText {
+    font-size: 20px;
+}
+
+.RadioInputText {
+    font-size: 18px;
+}
+
+.ButtonB{
+    margin-right: 2%;
+    margin-left: 2%;  
+    border: 2.2px solid transparent; 
+    font-family: 'Montserrat', sans-serif; 
+    text-decoration: none;
+    color: white;
+    font-size: 20px;
+    background-color: black;
+    border-radius: 10px;
+    width: 20%;
+    height: 50px;
+}
+
+.ButtonB:hover{ 
+    animation: HoverZoom ease 500ms;
+    animation-fill-mode: both;
+    background: #1b1b1c;
+}
+
+/**/
+/**/
+/*Footer*/
+
+footer{
+    position: relative;
+    width: 100%;
+    bottom: 0;
+    background-color: black;
+}
+
+.MainFooter{
+    text-align: center;
+}
+
+.MainFooterLogo{
+    height: 200px;
+    width: 200px;
+    padding-top: 30px;
+    padding-right: 30px;
+    display: inline-block;
+}
+
+.MainFooterContent{
+    display: inline-block;
+    align-content: center;
+    vertical-align: middle;
+}
+
+.MainFooterSection{
+    display: table-cell;
+    text-align: left;
+    padding-top: 30px;
+    padding-right: 30px;
+    vertical-align: top;
+}
+
+.MainFooterHeader{
+    color: #ffffff;
+    display: inline-block;
+    position: inherit;
+    margin-top: 0;
+    margin-bottom: 10%;
+}
+
+.MainFooterList{
+    background-color: transparent;
+}
+
+.MainFooterList a{
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.MainFooterList a:hover{
+    opacity: 0.6; 
+    text-decoration: none;
+    position: relative;
+}
+
+.MainFooterLink {
+    color: white;
+}
+
+.MainFooterItem a{
+    display: inline-block;
+}
+
+.fa-brands {
+    padding-left: 20px;
+    font-size: 20px;
+}
+
+.fa-solid {
+    padding-left: 20px;
+    font-size: 20px;
+}
+
+.MainFooterItem .Socials{
+    padding-right: 30px;
+    display: inline-block;
+
+}
+
+#eksterni {
+    margin-bottom: 29px;
+}
+
+.Copyright{
+    margin: 0px auto;
+    padding-top: 15px;
+    color: white;
+    bottom: 0;
+}
+
+/*TrucksPage*/
+
+.TruckVideo {
+    display: block;
+    margin: 0px auto;
+    width: 885px;
+    height: 500px;
+}
+
+.Textualno {
+    margin: 0% auto;
+    text-align: center;
+}
+
+.Textic {
+    display: inline-block;
+    width: 830px;
+    margin: 1%;
+}
+
+.MainTextHeadPonuda {
+    font-size: 28px;
+    margin-top: 2%;
+}
+
+.MainTextParagraphPonuda {
+    text-align: center;
+    margin: 0px auto;
+    margin: 2% 3% 5% 3%;
+    font-size: 18px;
+}
+
+/*Other CSS elements*/
+
+a{
+    color: inherit;
+}
+
+hr {
+    border: 0.1px solid transparent; 
+    border-color: #000000;  
+    height: 1%;
+    margin-left: 20%;
+    margin-right: 20%;
+}
+
+span {
+    vertical-align: bottom;
+}/*Align materials*/
+
+ul{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    background-color: #ffffff;
+    color: #000;
+}/*Remove bullets*/
+
+#active {
+    background-color: #c4c4c4;
+}
+
+.Spacer10 {
+    height: 10px;
+}
+
+.Spacer25 {
+    height: 25px;
+}
+
+.Spacer50 {
+    height: 50px;
+}
+
+/*Galery slider*/
+
+.ImageUnderBanner img{
+    position: absolute;
+    width: 50%;
+    left: 25%;
+}
+
+.ImageUnderBanner img:nth-child(1) {
+    animation: promena 15s 0s infinite; 
+    z-index:5;
+}
+
+.ImageUnderBanner img:nth-child(2) {
+    animation: promena 15s 3s infinite;
+    z-index:4;
+}
+
+.ImageUnderBanner img:nth-child(3) {
+    animation: promena 15s 6s infinite; 
+    z-index:3;
+}
+
+.ImageUnderBanner img:nth-child(4) {
+    animation: promena 15s 9s infinite; 
+    z-index:2;
+}
+.ImageUnderBanner img:nth-child(5) {
+    animation: promena 15s 12s infinite;
+    z-index:1;
+}
+
+/*Icons*/
+
+.material-symbols-outlined {
+    font-variation-settings:
+    'FILL' 0,
+    'wght' 400,
+    'GRAD' 0,
+    'opsz' 24
+  }
